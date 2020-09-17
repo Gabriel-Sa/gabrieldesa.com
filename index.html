@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="styles.css" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="module" src="index.js"></script>
         <title>Gabriel de Sa</title>
     </head>
@@ -13,45 +13,87 @@
         <div class="container">
             <nav class="menu" id="navBar">
                 <ul>
-                    <li ><a class="active" href="#home">Home</a></li>
+                    <li><a class="active" href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
+
                     <img src="./imgs/profile.png" alt="Profile" class="profile">
                 </ul>
             </nav>
 
-
-            <section id="home">
-                <h1>I am
-                    <h1 class="home-animation">
-                        <span class="text-wrapper">
-                            <span class="line line1"></span>
-                            <span class="txt-rotate"
-                            data-period="750"
-                            data-rotate=
-                            '["a &lt developer &gt ;", "a leader.",
-                            "open-minded.", "a critical-thinker.", "Gabriel de Sa."]'></span>
-                        </span>
+            <div class=main>
+                <section id="home">
+                    <h1 id="iam">I am
+                        <h1 class="home-animation">
+                            <span class="text-wrapper">
+                                <span class="line line1"></span>
+                                <span class="txt-rotate"
+                                data-period="2000"
+                                data-rotate=
+                                '["a &lt developer &gt ;", "a leader.",
+                                "a critical-thinker.", "open-minded.", "persistent.", "curious.", "Gabriel de Sa."]'></span>
+                            </span>
+                        </h1>
                     </h1>
-                </h1>
-            </section>
-
-            <section id="about">
-                <h1>About</h1>
-                <p class="aboutParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
-            </section>
-            <section id="projects">
-                <h1>Projects</h1>
-                <h2>Developer</h2>
-            </section>
-            <section id="contact">
-                <h1>Contact</h1>
-                <h2>Developer</h2>
-            </section>
+                </section>
+                <section id="about">
+                    <h1>About Me</h1>
+                    <article class="about-card">
+                        <p> Ever since I was kid I remember that I always wanted to be in the tech industry,
+                         especially as an executive. I always wanted to learn about computers and how they work,
+                         and then use that to change the world. As I grew older my curiosity for computers and business never ended. I started to learn about companies and management, as well as how to apply computer systems to benefit society.
+                         Most Universities ask that you chose one major, I couldn’t settle on limiting myself so I decided to do both.
+                         I major in Computer Science and Business Finance.
+                         The interpersonal, and management skills I’ve learned from my B.B.A. classes gives me the ability to communicate and work effectively in a team.
+                         And the skills I’ve developed from Computer Science classes, have given me a tool in creating the future I desire. I look forward to always learning and never satiating my curiosity.
+                         So feel free to <a href="#contact"><span>contact me</span></a>, I hope to hear from you soon!
+                        </p>
+                   </article>
+                </section>
+                <section id="projects">
+                    <h1>My Projects</h1>
+                    <section class="cards">
+                        <article class="card">
+                            <header class="card-header">
+                                <img src="./imgs/logo1.png" alt="riai.tech logo" class="card-images">
+                                <p>Riai is a financial services website that I am currently building.
+                                It uses machine learning on gathered stock fundamentals
+                                and market sentiment data to predict future profitability.
+                                I've worked on all parts of the website using it to
+                                grow my finance and programming skills. </p>
+                                <a href="http://riai.tech">Travel to Riai.tech.</a>
+                            </header>
+                        </article>
+                        <article class="card">
+                            <header class="card-header">
+                                <h2>SketchApp</h2>
+                                <p>SketchApp is a social media app that uses machine
+                                learning to predict user drawings and then store it to show
+                                other users that follow those categories. It also pulls from the
+                                web to show users a daily dose of cute animal pictures.</p>
+                            </header>
+                        </article>
+                        <article class="card">
+                            <header class="card-header">
+                                <img src="./imgs/GitHub_Logo.png" alt="GitHub Logo" class="card-images">
+                                <p>My GitHub has all my applications and school projects, including this website which is
+                                hosted by GitHub Pages. Some of the repositories are private, but I will be adding more
+                                as I progress in my Education and Career.</p>
+                                <a href="https://github.com/gabriel-sa">Travel to my GitHub Repo.</a>
+                            </header>
+                        </article>
+                    </section>
+                </section>
+                <section id="contact">
+                    <h1>Contact Information</h1>
+                    <ul>
+                        <li>Email: contact@gabrieldesa.me</li>
+                        <li>Phone Number: (469) - 262 - 9925</li>
+                        
+                    </ul>
+                </section>
+            </div>
         </div>
 
 

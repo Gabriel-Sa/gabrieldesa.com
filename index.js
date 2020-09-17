@@ -1,3 +1,4 @@
+//Home section animation
 var TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -11,7 +12,6 @@ var TxtRotate = function(el, toRotate, period) {
 TxtRotate.prototype.tick = function() {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
-
     if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
@@ -21,9 +21,9 @@ TxtRotate.prototype.tick = function() {
     this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
     var that = this;
-    var delta = 300 - Math.random() * 100;
+    var delta = 75;
 
-    if (this.isDeleting) { delta /= 2; }
+    if (this.isDeleting) { delta /= 1.5 }
 
     if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
@@ -53,3 +53,53 @@ window.onload = function() {
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #fff; color: #F8B195}";
     document.body.appendChild(css);
 };
+
+$(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+
+        $('a').each(function() {
+            $(this).removeClass('active');
+        });
+
+        $(this).addClass('active');
+    });
+});
+
+$('#home').hover(
+    function() {
+        $('a').each(function() {
+            $(this).removeClass('active');
+        });
+        $('a[href="#home"]').addClass('active');
+    },
+    function() { }
+);
+
+$('#about').hover(
+    function() {
+        $('a').each(function() {
+            $(this).removeClass('active');
+        });
+        $('a[href="#about"]').addClass('active');
+    },
+    function() { }
+);
+
+$('#projects').hover(
+    function() {
+        $('a').each(function() {
+            $(this).removeClass('active');
+        });
+        $('a[href="#projects"]').addClass('active');
+    },
+    function() { }
+);
+$('#contact').hover(
+    function() {
+        $('a').each(function() {
+            $(this).removeClass('active');
+        });
+        $('a[href="#contact"]').addClass('active');
+    },
+    function() { }
+);
