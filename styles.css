@@ -166,7 +166,6 @@ body{
 }
 .card-header a{
     text-decoration: none;
-
     color: #F67280;
 }
 .card-header p{
@@ -177,6 +176,53 @@ body{
 .card-images{
     padding-top: 1rem;
     width: 300px;
+}
+.contactCards{
+    scroll-snap-align: none !important;
+    display: flex;
+}
+
+.icons{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 130px;
+    width: 150px;
+    min-width: 50px;
+    padding: 1.8rem;
+    border-radius: 50%;
+    background: #355C7D;
+    transition: .4s;
+}
+.icons a img{
+    height: 130px;
+    width: 150px;
+    align: center;
+}
+.icons:hover{
+    transform: translateY(10px);
+    border-radius: 20%;
+    box-shadow: -.5rem 0 .5rem #111;
+}
+.icons:hover~.icons{
+    transform: translateX(10px);
+    transform: rotateY(360deg);
+    transition: .6s;
+}
+.phoneIcon:hover{
+    transform: translateY(10px);
+    border-radius: 20%;
+    height: 160px;
+    box-shadow: -.5rem 0 .8rem #111;
+}
+.hiddenText{
+    align: center;
+    transform: translateY(1rem);
+    visibility: hidden;
+    font-size: 90%;
+}
+.icons:hover > .hiddenText{
+    visibility: visible;
 }
 
 .errorPage{
