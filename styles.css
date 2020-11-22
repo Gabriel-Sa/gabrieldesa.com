@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
+:root{
+  --background-color: #FFFFFF;
+}
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +10,7 @@
 }
 
 body{
-    background: #18818F;
+    background: var(--background-color);
     max-width: 100%;
     height: 100vh;
     line-height: 1.6;
@@ -42,7 +45,6 @@ body{
 }
 .menu ul li{
     padding: .4rem;
-
 }
 .menu ul li a {
     text-decoration: none;
@@ -129,8 +131,8 @@ body{
     position: absolute;
     width: 30px;
     height: 30px;
-    border-left: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
     transform: rotate(-45deg);
     box-sizing: border-box;
     animation: downArrow 2s infinite;
@@ -216,7 +218,7 @@ body{
     min-width: 50px;
     padding: 1.8rem;
     border-radius: 50%;
-    background: #18818F;
+    background: var(--background-color);
     transition: .4s;
 }
 .icons a img{
@@ -264,5 +266,5 @@ body{
     font-size: 40px;
 }
 .errorPage a{
-    color: #18818F;
+    color: var(--background-color);
 }
