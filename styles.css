@@ -24,26 +24,149 @@ body{
     scroll-snap-type: y mandatory;
 }
 
-.menu{
-    height: 100%;
-    width: 130px;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    padding-left: 6rem;
-    padding-top: 7rem;
+/* Mobile Screens */
+@media only screen and (max-width: 1000px){
+    .menu{
+        display: none;
+    }
+    .main section{
+        height: fit-content;
+        padding-bottom: 50% !important;
+        width: 100%;
+        margin-left: 4vw;
+        line-height: 1.8;
+    }
+    .main section h1{
+        color: #F8B195;
+        font-size: 200%;
+    }
+    .down-arrow{
+        position: relative;
+        margin-left: 42.5%;
+    }
+    .cards{
+        margin-top: 100px;
+        width: 100%;
+        display: inline-block;
+    }
+    .card{
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        flex-direction: column;
+        height: fit-content;
+        min-height: 300px;
+        width: 75%;
+        max-width: 350px;
+        padding: 1.5rem;
+        border-radius: 30px;
+        background: #F2EFE9;
+        box-shadow: -.3rem 0 .5rem #111;
+        transition: .2s;
+    }
+    .card:hover{
+        transform: translateY(-5rem);
+    }
+    .card:hover~.card{
+        transform: translateY(170px);
+    }
+    .card:not(:first-child){
+        margin-top: -150px;
+    }        
+    .hiddenText{
+        font-size: 13px;
+        font-weight: bold;
+        overflow-wrap: none;
+        transform: translateX(1rem);
+        visibility: hidden;
+        font-size: 50%;
+    }
 }
+/* Large Screens */
+@media only screen and (min-width: 1000px){
+    .main{
+        margin-left: 175px;
+        margin-right: 50px;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        width: auto;
+    }
+    .main section{
+        scroll-snap-align: start;
+        height: fit-content;
+        padding-bottom: 50vh !important;
+        width: 100%;
+        padding-top: 14vh;
+        margin-left: 4vw;
+        line-height: 1.8;
+    }
+    .menu{
+        height: 100%;
+        width: 150px;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left:0;
+        overflow: hidden;
+        padding-left: 4rem;
+        padding-top: 7rem;
+    }
+    .main section h1{
+        color: #F8B195;
+        font-size: 300%;
+    }
+    .down-arrow{
+        position: absolute;
+        left: 40%;
+    }
+    .cards{
+        scroll-snap-align: start;
+        display: flex;
+    }
+    .card{
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        flex-direction: column;
+        height: 350px;
+        width: 300px;
+        min-width: 250px;
+        padding: 1.5rem;
+        border-radius: 30px;
+        background: #F2EFE9;
+        box-shadow: -.3rem 0 .5rem #111;
+        transition: .2s;
+    }
+    .card:hover{
+        transform: translateY(-5rem);
+    }
+    .card:hover~.card{
+        transform: translateX(200px);
+    }
+    .card:not(:first-child){
+        margin-left: -200px;
+    }
+
+    .hiddenText{
+        font-size: 13px;
+        font-weight: bold;
+        overflow-wrap: none;
+        transform: translateX(1rem);
+        visibility: hidden;
+        font-size: 90%;
+    }
+}
+
 .menu ul{
     text-decoration: none;
     list-style: none;
     display: flex;
     flex-flow: column wrap;
+    left:0;
 }
 .menu ul li{
     padding: .4rem;
-
 }
 .menu ul li a {
     text-decoration: none;
@@ -71,26 +194,6 @@ body{
     filter: grayscale(.5);
 }
 
-.main{
-    margin-left: 300px;
-    margin-right: 10px;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-}
-.main section{
-    scroll-snap-align: start;
-    width: 100%;
-    height: 100vh;
-    padding-top: 14vh;
-    margin-left: 4vw;
-    line-height: 1.8;
-}
-.main section h1{
-    color: #F8B195;
-    font-size: 300%;
-}
-
 #iam{
     color: black;
 }
@@ -100,6 +203,12 @@ body{
     font-size: 150%;
     text-transform: uppercase;
     line-height: 1.2;
+}
+#about {
+    width: 100%
+}
+#projects{
+    padding-bottom: 0% !important;
 }
 #about p{
     padding: 1rem;
@@ -114,11 +223,6 @@ body{
 }
 #about a:hover{
     color: #F8B195;
-}
-
-.down-arrow{
-    position: absolute;
-    left: 40%;
 }
 #home .down-arrow{
     padding-top: 30vh;
@@ -147,47 +251,15 @@ body{
     transform: rotate(-45deg) translate(0, 0);
   }
 }
-
 .about-card{
-    width: 930px;
-    height: 400px;
-    min-width: 400px;
+    max-width: 900px;
+    width: 90%;
+    height: fit-content;
     overflow: hidden;
     border-radius: 30px;
     background: #F2EFE9;
-    box-shadow: -1rem 0 3rem #111;
+    box-shadow: -.2rem 0 1rem #111;
     transform: translateY(3rem);
-}
-.about-card:hover{
-    transform: translateY(2rem);
-}
-
-.cards{
-    scroll-snap-align: none !important;
-    display: flex;
-}
-.card{
-    display:flex;
-    overflow: hidden;
-    position: relative;
-    flex-direction: column;
-    height: 350px;
-    width: 300px;
-    min-width: 250px;
-    padding: 1.5rem;
-    border-radius: 30px;
-    background: #F2EFE9;
-    box-shadow: -.5rem 0 3rem #111;
-    transition: .2s;
-}
-.card:hover{
-    transform: translateY(-5rem);
-}
-.card:hover~.card{
-    transform: translateX(170px);
-}
-.card:not(:first-child){
-    margin-left: -150px;
 }
 .card-header a{
     text-decoration: none;
@@ -207,49 +279,39 @@ body{
     scroll-snap-align: none !important;
     display: flex;
 }
-
+.contactCards{
+    display: grid !important;
+    grid-template-columns: 50% 50%;
+    padding-right: 10%;
+}
 .icons{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    height: 130px;
-    width: 150px;
-    min-width: 50px;
-    padding: 1.8rem;
-    border-radius: 50%;
-    background: #ebedeeff;
+    padding: 2rem;
+    border-radius: 80%;
     transition: .4s;
 }
 .icons a img{
-    height: 130px;
-    width: 150px;
-    align: center;
+    height: 150px;
+    width: 100px;
+    box-align: center;
 }
 .icons:hover{
     transform: translateY(10px);
     border-radius: 20%;
     box-shadow: -.5rem 0 .5rem #111;
 }
-.icons:hover~.icons{
-    transform: translateX(10px);
-    transform: rotateY(360deg);
-    transition: .6s;
+
+.phoneIcon > img{
+    height: 150px;
+    width: 100px;
 }
+
 .phoneIcon:hover{
     transform: translateY(10px);
     border-radius: 20%;
     height: 160px;
     box-shadow: -.5rem 0 .8rem #111;
 }
-.hiddenText{
-    font-size: 13px;
-    font-weight: bold;
-    overflow-wrap: none;
-    align: center;
-    transform: translateY(1rem);
-    visibility: hidden;
-    font-size: 90%;
-}
+
 .icons:hover > .hiddenText{
     visibility: visible;
 }
@@ -259,7 +321,6 @@ body{
     top: 100%;
     transform: translate(0, 50%);
     vertical-align: center;
-
 }
 .errorPage h1{
     font-size: 40px;
